@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CGL Support</title>
+<meta name="description" content="Help and answers for CGL, the app that saves your TikTok, YouTube, Instagram, and X links into organized shelves.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f131a;
+    --surface: #1b212b;
+    --surface-high: #212836;
+    --outline: #2a303c;
+    --ink: #f4f1ea;
+    --ink-dim: #9ca3b0;
+    --primary: #c2445b;
+    --primary-container: #331d22;
+    --on-primary-container: #e28a9b;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .wordmark {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  a { color: var(--on-primary-container); }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 20px 96px;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+
+  header.masthead img {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(194, 68, 91, 0.35);
+  }
+
+  .wordmark { font-size: 22px; color: var(--ink); }
+  .wordmark span { display: block; font-family: 'IBM Plex Sans', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); margin-top: 2px; }
+
+  html { overflow-x: hidden; }
+  .hero h1 { font-size: clamp(30px, 6vw, 42px); margin: 0 0 14px; }
+  .hero p { font-size: 17px; color: var(--ink-dim); max-width: 500px; margin: 0 0 8px; }
+
+  .eyebrow {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 64px 0 18px;
+  }
+
+  .cards { display: flex; flex-direction: column; gap: 1px; background: var(--outline); border: 1px solid var(--outline); border-radius: 16px; overflow: hidden; }
+  .card { background: var(--surface); padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; }
+  .card .icon {
+    flex: none;
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: var(--primary-container);
+    color: var(--on-primary-container);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px;
+  }
+  .card h3 { margin: 2px 0 4px; font-size: 16px; }
+  .card p { margin: 0; color: var(--ink-dim); font-size: 14.5px; }
+
+  details {
+    background: var(--surface);
+    border: 1px solid var(--outline);
+    border-radius: 14px;
+    padding: 4px 20px;
+    margin-bottom: 10px;
+  }
+  details + details { margin-top: 10px; }
+  summary {
+    cursor: pointer;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 15.5px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--primary);
+    flex: none;
+    transition: transform 0.15s ease;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 18px; color: var(--ink-dim); font-size: 14.5px; }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--outline);
+    color: var(--ink-dim);
+    font-size: 13px;
+  }
+  footer .brand { color: var(--ink); font-weight: 600; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 40px 18px 72px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <img src="icon.png" alt="CGL app icon">
+      <div class="wordmark">CGL<span>Content Gathering Locker</span></div>
+    </header>
+
+    <section class="hero">
+      <h1>Support &amp; Help</h1>
+      <p>CGL saves links from TikTok, YouTube, Instagram, and X into folders you organize yourself — synced through your own private iCloud account, with no server and no sign-in in between.</p>
+    </section>
+
+    <h2 class="eyebrow">How to save</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">↑</div>
+        <div>
+          <h3>Share Sheet</h3>
+          <p>In TikTok, YouTube, Instagram, X, Safari, or anywhere else, tap Share → CGL.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">▦</div>
+        <div>
+          <h3>Quick Save widget</h3>
+          <p>Copy a link, then tap the CGL widget on your Home Screen — no share sheet needed.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon">⏻</div>
+        <div>
+          <h3>Control Center</h3>
+          <p>Add "Save to CGL" in Settings → Control Center for a one-tap save from the Lock Screen.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="eyebrow">Frequently asked questions</h2>
+
+    <details open>
+      <summary>Where is my saved content stored?</summary>
+      <p>In your own private iCloud account — CGL doesn't run a server that holds your saved links, folders, or notes. That also means the same content shows up automatically on any of your devices signed into the same iCloud account.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to create an account?</summary>
+      <p>No. There's no sign-up and no login — your iCloud account is the only identity involved, and CGL never sees it directly.</p>
+    </details>
+
+    <details>
+      <summary>How do I move a save into a different folder?</summary>
+      <p>Open the item, tap the "Folder" row, and pick a folder — or Unsorted to file it back out. You can do this any time, not just right after saving.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete something?</summary>
+      <p>Swipe left on any item in a list to delete it, or open a folder and use the trash icon in the top bar to delete everything in it at once.</p>
+    </details>
+
+    <details>
+      <summary>Why doesn't a saved item have a title or thumbnail yet?</summary>
+      <p>That detail is fetched in the background right after saving and usually appears within a few seconds. If it's still missing after reopening the app, it'll retry automatically the next time CGL comes to the foreground.</p>
+    </details>
+
+    <details>
+      <summary>Does this work on iPad too?</summary>
+      <p>Yes — install CGL on any of your devices signed into the same iCloud account and your saves, folders, and notes sync automatically.</p>
+    </details>
+
+    <details>
+      <summary>Does CGL collect or sell my data?</summary>
+      <p>No. There's no analytics, no ads, and nothing shared with third parties — the only place your saves exist is your own iCloud account.</p>
+    </details>
+
+    <footer>
+      <p class="brand">CGL — Content Gathering Locker</p>
+      <p>Your content, captured and organized.</p>
+    </footer>
+  </div>
+</body>
+</html>
